@@ -114,10 +114,10 @@ export default function ResultPage() {
 
       <div className="mt-6 p-4 bg-gray-100 rounded border w-full max-w-4xl">
         <h2 className="text-xl font-semibold text-gray-900">📖 생성된 웹툰</h2>
-        <p className="mt-2 font-bold">제목: {formData.story?.title || "제목 없음"}</p>
+        <p className="mt-2 font-bold text-gray-900">제목: {formData.story?.title || "제목 없음"}</p>
         <p className="mt-2 text-gray-800">줄거리: {Array.isArray(formData.story?.story) ? formData.story.story.join(" ") : formData.story?.story || "줄거리 없음"}</p>
 
-        <h3 className="text-lg font-semibold mt-4">💬 주요 대사</h3>
+        <h3 className="text-lg font-semibold text-gray-900 mt-4">💬 주요 대사</h3>
         <ul className="list-disc pl-5 text-gray-800">
           {(formData.story?.dialogues || []).map((dialogue: any, index: number) => (
             <li key={index} className="mt-1">
